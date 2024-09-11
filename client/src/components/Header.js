@@ -20,9 +20,9 @@ function Header({isLogin,setIsLogin}){
     }
 
     return (
-        <div className="w-full flex justify-between items-center my-1">
-            <NavLink to="/" className="text-5xl font-semibold cursor-pointer" >BLOG</NavLink>
-            <div className="flex flex-row gap-x-4 text-lg">
+        <div className="w-full flex justify-between items-center my-1 max-md:w-screen max-md:justify-around">
+            <NavLink to="/" className="text-5xl font-semibold cursor-pointer max-md:text-2xl max-sm:text-xl" >BLOG</NavLink>
+            <div className="flex flex-row gap-x-4 text-lg max-md:text-sm max-sm:text-xs">
                 <NavLink className="hover:scale-95 transition duration-150 cursor-pointer" to="/"> Home
                 </NavLink>
                 <NavLink className="hover:scale-95 transition duration-150 cursor-pointer" to="/my_post"> My Post
@@ -30,7 +30,7 @@ function Header({isLogin,setIsLogin}){
                 <NavLink className="hover:scale-95 transition duration-150 cursor-pointer" to="/create_post"> Create Post
                 </NavLink>
             </div>
-            <div>
+            <div className="max-md:text-sm">
                 {
                     isLogin?
                     (<button onClick={logoutHandler}

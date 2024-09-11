@@ -15,6 +15,7 @@ function SignInHandler({isRegistered,setIsRegistered,setIsLogin}){
         event.preventDefault();
         let data=await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/register`,{
             method:"POST",
+            credentials:'include',
             body:JSON.stringify(formData),
             headers:{'Content-Type':'application/json'}
         });

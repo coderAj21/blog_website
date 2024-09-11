@@ -23,12 +23,12 @@ function Post({title,content,post_id,setPosts}){
     }
     return (
         <div className="border w-1/2 h-fit shadow rounded-md">
-            <p className="uppercase font-bold mx-4 my-2">{title}</p>
-            <p className="mx-4">{content}</p>
-            <div className="flex gap-x-4 m-4">
-                <button onClick={editHandler} className="bg-zinc-700 text-white p-1 px-4 rounded hover:bg-zinc-900
+            <p className="uppercase font-bold mx-4 my-2 max-sm:text-sm">{title}</p>
+            <p className="mx-4 max-md:text-sm max-sm:text-xs">{content}</p>
+            <div className="flex gap-x-4 m-4 max-md:text-sm max-sm:text-xs">
+                <button onClick={editHandler} className="bg-zinc-700 text-white p-1 px-4 max-sm:px-2 rounded hover:bg-zinc-900
                                     transition duration-150 ease-in">Edit</button>
-                <button onClick={deleteHandler} className="bg-red-700 text-white p-1 px-4 rounded hover:bg-red-900
+                <button onClick={deleteHandler} className="bg-red-700 text-white p-1 px-4 max-sm:px-2 rounded hover:bg-red-900
                  transition duration-150 ease-in" >Delete</button>
             </div>
         </div>

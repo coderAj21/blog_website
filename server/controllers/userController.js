@@ -33,8 +33,6 @@ exports.login=async(req,res)=>{
         let token=jwt.sign(option,process.env.JWT_SECRET);
         return res.cookie("token",token,{
             httpOnly:true,
-            sameSite: 'none',
-            secure:true,
         })
         .status(200).json({
             success:true,
@@ -78,8 +76,6 @@ exports.register=async(req,res)=>{
         const token=jwt.sign(option,process.env.JWT_SECRET);
         return res.cookie("token",token,{
             httpOnly:true,
-            sameSite: 'None'
-
         })
         .status(200).json({
             success:true,

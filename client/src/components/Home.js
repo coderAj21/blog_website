@@ -15,7 +15,7 @@ function Home(){
     return (
         <div className="w-full h-full flex flex-col items-center gap-y-4 py-4">
             {
-                posts.map((val,ind)=>{
+                posts?.map((val,ind)=>{
                     return <Post key={"post"+ind} title={val.title} content={val.content} post_id={val._id} setPosts={setPosts}  ></Post>
                 })
             }

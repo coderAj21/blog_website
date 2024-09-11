@@ -10,7 +10,7 @@ import EditPost from "./components/EditPost";
 function App(){
   let [isLogin,setIsLogin]=useState(false);
   return (
-    <div className="w-[1140px] h-screen mx-auto">
+    <div className="max-w-[1140px] h-screen mx-auto max-md:w-screen">
       <Header isLogin={isLogin} setIsLogin={setIsLogin}/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
